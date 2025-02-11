@@ -1,0 +1,1 @@
+⊹˚. Esta é uma API simples para gerenciamento de uma biblioteca de jogos com categorias e um carrinho de compras, desenvolvida como atividade do curso técnico em Desenvolvimento de Sistemas no SENAI. Ela permite organizar jogos, adicionar e remover itens do carrinho e calcular o valor total automaticamente. ദ്ദി •⩊• )
