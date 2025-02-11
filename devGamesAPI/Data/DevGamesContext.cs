@@ -20,5 +20,7 @@ namespace devGamesAPI.Data
             modelBuilder.Entity<Jogo>().ToTable("Jogos");
             modelBuilder.Entity<Categoria>().ToTable("Categorias");
         }
+        public DbSet<devGamesAPI.Models.Carrinho> Carrinho { get; set; } = default!;
+        public DbSet<devGamesAPI.Models.ItemCarrinho> ItemCarrinho { get; set; } = default!;
     }
 }

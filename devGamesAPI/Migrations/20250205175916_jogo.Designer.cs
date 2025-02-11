@@ -13,7 +13,7 @@ namespace devGamesAPI.Migrations
 {
     [DbContext(typeof(DevGamesContext))]
     [Migration("20250205175916_jogo")]
-    partial class jogo
+    partial class Jogo
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

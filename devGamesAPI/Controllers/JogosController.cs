@@ -13,7 +13,6 @@ namespace devGamesAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class JogosController : ControllerBase
     {
         private readonly DevGamesContext _context;
@@ -24,7 +23,6 @@ namespace devGamesAPI.Controllers
         }
 
         // GET: api/Jogos
-        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Jogo>>> GetJogos()
         {
@@ -106,6 +104,24 @@ namespace devGamesAPI.Controllers
         private bool JogoExists(Guid id)
         {
             return _context.Jogos.Any(e => e.JogoId == id);
+        }
+
+        // Adicione este método ao JogosController
+
+        // GET: api/Jogos/ByName
+        [HttpGet("ByName")]
+        public async Task<ActionResult<IEnumerable<Jogo>>> GetJogosByName(string name)
+        {
+            var jogos = await _context.Jogos
+                .Where(j => j.JogoNome.Contains(name))
+                .ToListAsync();
+
+            if (jogos == null || !jogos.Any())
+            {
+                return NotFound();
+            }
+
+            return jogos;
         }
     }
 }

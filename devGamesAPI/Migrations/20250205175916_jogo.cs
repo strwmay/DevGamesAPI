@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace devGamesAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class jogo : Migration
+    public partial class Jogo : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
